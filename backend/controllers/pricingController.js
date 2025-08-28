@@ -1,6 +1,7 @@
 const PricingCard = require('../models/pricingCard')
 
 exports.getPrincing = async (req, res) => {
+    console.log("checkinh it")
     try {
         const prcingData = await PricingCard.find()
         if (prcingData.length === 0) {
