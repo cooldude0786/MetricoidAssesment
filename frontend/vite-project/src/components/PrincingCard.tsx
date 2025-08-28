@@ -10,6 +10,7 @@ interface PricingCardData {
     disclaimer: string[];
 }
 
+
 const PricingCard: React.FC = () => {
     const [data, setData] = useState<PricingCardData | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
@@ -17,7 +18,7 @@ const PricingCard: React.FC = () => {
 
     useEffect(() => {
         // Replace with your backend API URL
-        const API_URL = 'http://localhost:3000/api/';
+        const API_URL = `${window.location.origin}/api`;
 
         const fetchData = async () => {
             try {
